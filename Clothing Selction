@@ -1,0 +1,142 @@
+
+//The purpose of this program is to prototype the game mechanics of generating garments
+//In my game, clothing will be generated to suit the style profile for indivisual characters
+//Each garment is composed of a collar, bodice and sleeves
+//The prototype requires setter functions to fill out garment capabilities and user style profile
+
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+#include <ctime>
+using namespace std;
+
+
+
+//keywords set as variables so I don't misstype them. TO DO:set all to const
+string Undefined = "Undefined";
+string Top = "Top";
+string Sleeve = "Sleeve";
+string Collar = "Collar";
+string Feminine = "Feminine";
+string Masculine = "Masculine";
+string Unisex = "Unisex";
+string RufflePleats = "RufflePleats";
+string Angular = "Angular";
+string Flowy = "Flowy";
+string Puffy = "Puffy";
+string FormFit = "FormFit";
+string Skimpy = "Skimpy";
+string SomeSkin = "SomeSkin";
+string Modest = "Modest";
+string Metal = "Metal";
+string Cloth = "Cloth";
+string Fur = "Fur";
+string Red = "Red";
+string Yellow = "Yellow";
+string Blue = "Blue";
+string Green = "Green";
+string Orange = "Orange";
+string White = "White";
+string Black = "Black";
+string Grey = "Grey";
+string Purple = "Purple";
+string Teal = "Teal";
+string Brown = "Brown";
+string Pink = "Pink";
+
+
+const char letterList[] = { '0', 'A', 'B', 'C', 'D', 'E', 'F' };
+
+
+class garmProfile //Garment capabilities, ie every attribute a garment could have. 
+	//Use this to generate a specific article of clothing
+{
+public:
+
+	char letter='0';
+	string type = Undefined;
+	string gender = Undefined;
+	string style = Undefined;
+	string modesty = Undefined;
+	vector <string> possibleMats;
+	//color is not included all colors are possible
+};
+
+
+
+class garmGen //a theoretical garment that the program generates
+{
+public:
+	
+	garmProfile identity;
+	string material;
+	string color;
+};
+//put defined garment objects here if you want to use the program to play with pre-designed garments. 
+//Pre-defined garments have the class garmGen
+
+class userProfile // the style profile of the user. 
+{
+public:
+
+	string gender = Undefined;
+	string style = Undefined;
+	string modesty = Undefined;
+	string material;
+	string color = Undefined;
+};
+
+string setGender() //setter function for both setting the gender of a garment or the user profile
+{
+	cout << "Select the gender\na) Feminine b) Masculine c) Unisex d)\n";
+	char x;
+	cin >> x;
+	switch (x)
+	{
+	case 'a':
+		return Feminine;//fem
+		break;
+	case 'b':
+		return Masculine; //mas
+		break;
+	case 'c':
+		return Unisex; //unisex
+		break;
+	default:
+	{
+		cout << "Enter a letter from the list.\n";
+		//setGender();
+	}
+	}
+}
+/*
+string setStyle()
+{}
+string setModesty ()
+{}
+string setMaterial ()
+{}
+vector <string> setPosMats ()
+{}
+string color ()
+{}
+void profileView () {}//display selected profile
+void profileSet()
+{
+	cout << "Enter the letter of the top you want to describe\n";
+	char letter;
+	cin >> letter;
+
+}
+*/
+
+int main()
+{
+	
+	return 0;
+}
+
+
